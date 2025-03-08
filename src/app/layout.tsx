@@ -16,9 +16,14 @@ const geistMono = Geist_Mono({
 const mabryPro = localFont({
   src: [
     {
+      path: '../../fonts/mabry-pro/MabryPro-Black.woff2',
+      weight: '900',
+      style: 'bold',
+    },
+    {
       path: '../../fonts/mabry-pro/MabryPro-Bold.woff',
       weight: '700',
-      style: 'normal',
+      style: 'semibold',
     },
     {
       path: '../../fonts/mabry-pro/MabryPro-Regular.woff',
