@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import React from 'react';
 
 type dataType = {
@@ -43,7 +44,7 @@ const Section2 = () => {
         {data.map(({ title, desc1, desc2 }, index) => (
           <div
             key={index}
-            className="w-full bg-primary rounded-tr-[4rem] rounded-bl-[4rem] flex flex-col justify-start items-center gap-y-20 p-12 pb-20"
+            className="w-full bg-primary rounded-tr-[4rem] rounded-bl-[4rem] flex flex-col justify-start items-center gap-y-20 p-12 pb-17"
           >
             <div className="font-semibold text-[#C9E6E5] text-5xl font-exo">
               {title}
@@ -56,6 +57,9 @@ const Section2 = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div>
+        <Button variant={"outline"} className='rounded-full text-2xl p-8 bg-secondary text-primary'>Start Your Personalized Health Journey →</Button>
       </div>
     </div>
   );
