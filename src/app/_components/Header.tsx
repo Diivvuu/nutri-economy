@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 const Header = () => {
   const router = useRouter();
   return (
-    <div className="relative w-full bg-[#1F4F46] flex items-center p-8">
+    <div className="relative w-full bg-primary flex items-center p-8 py-12 rounded-b-4xl font-exo">
       <div
         className="flex justify-start cursor-pointer"
         onClick={() => {
@@ -16,8 +16,8 @@ const Header = () => {
       >
         <Image src={logo} alt="logo" />
       </div>
-      <div className="absolute left-1/2 -translate-x-1/2 flex items-center text-white text-2xl gap-x-12">
-        <div className="cursor-pointer hover:scale-105 transition-all ease-in-out duration-300">
+      <div className="absolute left-1/2 -translate-x-1/2 flex items-center text-white text-2xl gap-x-12 font-normal">
+        <div className="cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 font-normal">
           Home
         </div>
         <div className="cursor-pointer hover:scale-105 transition-all ease-in-out duration-300">
