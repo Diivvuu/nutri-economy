@@ -43,7 +43,7 @@ const Header = () => {
       </div>
 
       <div className="flex justify-end ml-auto">
-        <Link href="/login" className="bg-transparent text-white text-2xl border-2 border-white rounded-full px-6 py-5 hidden lg:flex">
+        <Link href="/login" className="bg-transparent text-white text-2xl border-2 border-white rounded-4xl px-6 py-3 hidden lg:flex">
           Login
         </Link>
         <div className="lg:hidden flex items-center">
@@ -82,7 +82,7 @@ const Header = () => {
         <Link href="/sales" className="hover:scale-105 transition-all ease-in-out duration-300">
           Sales
         </Link>
-        <Link href="/login" className="bg-transparent text-white text-lg border-2 border-white rounded-full px-4 py-3 mt-4">
+        <Link href="/login" className="bg-transparent text-white text-lg border-2 border-white rounded-full px-4 py-1 mt-4">
           Login
         </Link>
       </div>
