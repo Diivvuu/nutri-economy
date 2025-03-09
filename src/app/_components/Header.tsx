@@ -5,11 +5,11 @@ import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
 
 const Header = () => {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -20,38 +20,32 @@ const Header = () => {
         isMenuOpen ? '' : 'rounded-b-4xl'
       } font-exo`}
     >
-      <div
-        className="flex justify-start cursor-pointer"
-        onClick={() => {
-          router.push('/');
-        }}
-      >
+      <Link href="/" className="flex justify-start">
         <Image src={logo} alt="logo" />
-      </div>
+      </Link>
+
       <div className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center text-white text-2xl gap-x-12 font-normal">
-        <div className="cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 font-normal">
+        <Link href="/home" className="hover:scale-105 transition-all ease-in-out duration-300 font-normal">
           Home
-        </div>
-        <div className="cursor-pointer hover:scale-105 transition-all ease-in-out duration-300">
+        </Link>
+        <Link href="/diet" className="hover:scale-105 transition-all ease-in-out duration-300">
           Diet
-        </div>
-        <div className="cursor-pointer hover:scale-105 transition-all ease-in-out duration-300">
+        </Link>
+        <Link href="/product" className="hover:scale-105 transition-all ease-in-out duration-300">
           Product
-        </div>
-        <div className="cursor-pointer hover:scale-105 transition-all ease-in-out duration-300">
+        </Link>
+        <Link href="/health" className="hover:scale-105 transition-all ease-in-out duration-300">
           Health
-        </div>
-        <div className="cursor-pointer hover:scale-105 transition-all ease-in-out duration-300">
+        </Link>
+        <Link href="/sales" className="hover:scale-105 transition-all ease-in-out duration-300">
           Sales
-        </div>
+        </Link>
       </div>
+
       <div className="flex justify-end ml-auto">
-        <Button
-          className="bg-transparent text-white text-2xl border-2 border-white rounded-full px-6 py-5 hidden lg:flex"
-          variant={'outline'}
-        >
+        <Link href="/login" className="bg-transparent text-white text-2xl border-2 border-white rounded-full px-6 py-5 hidden lg:flex">
           Login
-        </Button>
+        </Link>
         <div className="lg:hidden flex items-center">
           <button
             onClick={toggleMenu}
@@ -65,6 +59,7 @@ const Header = () => {
           </button>
         </div>
       </div>
+
       <div
         className={`absolute top-full left-0 w-full bg-primary text-white flex flex-col items-center gap-y-2 py-4 lg:hidden text-lg transition-all duration-300 ease-in-out ${
           isMenuOpen
@@ -72,27 +67,24 @@ const Header = () => {
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}
       >
-        <div className="cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 font-normal">
+        <Link href="/home" className="hover:scale-105 transition-all ease-in-out duration-300 font-normal">
           Home
-        </div>
-        <div className="cursor-pointer hover:scale-105 transition-all ease-in-out duration-300">
+        </Link>
+        <Link href="/diet" className="hover:scale-105 transition-all ease-in-out duration-300">
           Diet
-        </div>
-        <div className="cursor-pointer hover:scale-105 transition-all ease-in-out duration-300">
+        </Link>
+        <Link href="/product" className="hover:scale-105 transition-all ease-in-out duration-300">
           Product
-        </div>
-        <div className="cursor-pointer hover:scale-105 transition-all ease-in-out duration-300">
+        </Link>
+        <Link href="/health" className="hover:scale-105 transition-all ease-in-out duration-300">
           Health
-        </div>
-        <div className="cursor-pointer hover:scale-105 transition-all ease-in-out duration-300">
+        </Link>
+        <Link href="/sales" className="hover:scale-105 transition-all ease-in-out duration-300">
           Sales
-        </div>
-        <Button
-          className="bg-transparent text-white text-lg border-2 border-white rounded-full px-4 py-3 mt-4"
-          variant={'outline'}
-        >
+        </Link>
+        <Link href="/login" className="bg-transparent text-white text-lg border-2 border-white rounded-full px-4 py-3 mt-4">
           Login
-        </Button>
+        </Link>
       </div>
     </div>
   );

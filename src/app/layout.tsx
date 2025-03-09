@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import localFont from 'next/font/local'; // ✅ Import for local fonts
 import './globals.css';
+import Header from './_components/Header';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -59,6 +60,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${mabryPro.variable} ${exo2.variable} antialiased`}
       >
+        <div className="fixed top-0 w-full z-90">
+          <Header />
+        </div>
         {children}
       </body>
     </html>

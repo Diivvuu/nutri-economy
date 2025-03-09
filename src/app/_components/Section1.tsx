@@ -8,9 +8,9 @@ const Section1 = () => {
       className="relative w-full min-h-screen bg-cover bg-center flex flex-col justify-between"
       style={{ backgroundImage: `url(${hero1.src})` }}
     >
-      <div className="w-full sticky top-0 z-50">
+      {/* <div className="w-full sticky top-0 z-50">
         <Header />
-      </div>
+      </div> */}
       <div className="flex flex-col justify-center items-start w-full text-white text-3xl p-8 md:p-12 lg:p-16 xl:p-20 max-w-screen-xl mx-auto 2xl:mx-0 flex-grow">
         <div className="flex flex-col items-start justify-center gap-y-8 md:gap-y-10 lg:gap-y-12 w-full md:w-8/12 lg:w-6/12 xl:w-5/12">
           <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-semibold tracking-wider font-mabry">
