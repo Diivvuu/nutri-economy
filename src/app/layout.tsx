@@ -63,7 +63,7 @@ export default function RootLayout({
         <div className="fixed top-0 w-full z-90">
           <Header />
         </div>
-        {children}
+        <div>{children}</div>
       </body>
     </html>
   );
