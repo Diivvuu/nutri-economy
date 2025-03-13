@@ -13,7 +13,7 @@ const page = () => {
         formSubmitted={formSubmitted}
         setFormSubmitted={setFormSubmitted}
       />
-      {!formSubmitted && <DietTable />}
+      {formSubmitted && <DietTable />}
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import React from 'react';
 
 const DietTable = () => {
@@ -166,6 +167,9 @@ const DietTable = () => {
           </div>
         </div>
       </section>
+      <div className="w-full flex justify-end py-5">
+        <Button className="bg-secondary text-black">Save & Export</Button>
+      </div>
     </div>
   );
 };

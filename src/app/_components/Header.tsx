@@ -25,9 +25,9 @@ const Header = () => {
       </Link>
 
       <div className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center text-white text-2xl gap-x-12 font-normal">
-        <Link href="/home" className="hover:scale-105 transition-all ease-in-out duration-300 font-normal">
+        {/* <Link href="/home" className="hover:scale-105 transition-all ease-in-out duration-300 font-normal">
           Home
-        </Link>
+        </Link> */}
         <Link href="/diet" className="hover:scale-105 transition-all ease-in-out duration-300">
           Diet
         </Link>
@@ -67,9 +67,9 @@ const Header = () => {
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}
       >
-        <Link href="/home" className="hover:scale-105 transition-all ease-in-out duration-300 font-normal">
+        {/* <Link href="/home" className="hover:scale-105 transition-all ease-in-out duration-300 font-normal">
           Home
-        </Link>
+        </Link> */}
         <Link href="/diet" className="hover:scale-105 transition-all ease-in-out duration-300">
           Diet
         </Link>

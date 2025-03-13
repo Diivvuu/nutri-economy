@@ -21,7 +21,7 @@ const ContactUs = ['xxx-xxx-xxxx', 'Email us'];
 const Footer = () => {
   return (
     <>
-      <div className="bg-primary w-full font-mabry flex flex-col md:flex-row gap-y-4 items-start justify-center p-10 border-b-2 border-white">
+      <div className="bg-primary w-full font-mabry flex flex-col md:flex-row gap-y-4 items-start justify-center p-10 border-b-2 border-t-2 border-white">
         <div className="w-5/12 flex flex-col justify-start items-start ">
           <Image src={logo} alt="logo" className="md:w-5/12" />
         </div>
@@ -59,7 +59,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-primary w-full pl-10 pt-5 pb-2 space-y-12 text-white font-mabry">
-        <h4 className="text-lg md:text-2xl">© 2024 Season Health. All rights reserved.</h4>
+        <h4 className="text-lg md:text-2xl">
+          © 2024 Season Health. All rights reserved.
+        </h4>
         <div className="flex items-center gap-x-8 text-base md:text-xl">
           <a>Privacy Policy</a>
           <a>Terms of Use</a>
