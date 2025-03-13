@@ -60,7 +60,7 @@ const Footer = () => {
       </div>
       <div className="bg-primary w-full pl-10 pt-5 pb-2 space-y-12 text-white font-mabry">
         <h4 className="text-lg md:text-2xl">
-          © 2024 Season Health. All rights reserved.
+          © 2025 Season Health. All rights reserved.
         </h4>
         <div className="flex items-center gap-x-8 text-base md:text-xl">
           <a>Privacy Policy</a>
