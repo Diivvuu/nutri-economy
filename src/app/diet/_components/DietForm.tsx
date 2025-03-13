@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { Dispatch, FormEvent, SetStateAction, useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import {
@@ -23,7 +23,13 @@ const dietaryPreferencesOptions = [
 
 type AllergyKey = 'gluten' | 'nuts' | 'dairy';
 
-const DietForm = () => {
+const DietForm = ({
+  formSubmitted,
+  setFormSubmitted,
+}: {
+  formSubmitted: boolean;
+  setFormSubmitted: Dispatch<SetStateAction<boolean>>;
+}) => {
   const [age, setAge] = useState('');
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
@@ -44,10 +50,35 @@ const DietForm = () => {
     }));
   };
 
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      // Collect all form data
+      const formData = {
+        age,
+        weight,
+        height,
+        dietaryPreference,
+        allergies,
+        dailyCalories,
+        activityLevel,
+      };
+
+      setFormSubmitted(true);
+      console.log(formData);
+    } catch (error: any) {
+      console.error(error);
+    }
+  };
+
   return (
-    <div className="mx-auto p-6 bg-primary text-secondary font-exo">
+    <div className="mx-auto w-full p-6 bg-primary text-secondary font-exo">
       <h2 className="text-3xl font-bold mb-6 text-center">User Details</h2>
-      <form className="space-y-8 max-w-5xl w-full mx-auto bg-[#eaeaea21] p-5 rounded-3xl">
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-8 max-w-5xl w-full mx-auto bg-[#eaeaea21] p-5 rounded-3xl"
+      >
         {/* Basic User Details */}
         <section>
           <h3 className="text-xl font-semibold mb-4">⿡ Basic User Details</h3>
