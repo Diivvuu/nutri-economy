@@ -4,7 +4,7 @@ import HealthyFoodMarketplace from './_components/HealthyFoodMarketplace';
 
 const page = () => {
   return (
-    <div>
+    <div className="xl:mt-[9vh]">
       <ProductHero />
       <HealthyFoodMarketplace />
     </div>
