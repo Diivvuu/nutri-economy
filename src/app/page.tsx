@@ -9,11 +9,12 @@ import Section4 from './_components/Section4';
 export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center">
+      <Header />
       <Section1 />
       <Section2 />
       <Section3 />
       <Section4 />
-      {/* <Footer/> */}
+      <Footer />
     </div>
   );
 }

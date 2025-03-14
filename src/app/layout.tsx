@@ -4,6 +4,9 @@ import localFont from 'next/font/local'; // ✅ Import for local fonts
 import './globals.css';
 import Header from './_components/Header';
 import Footer from './_components/Footer';
+import { Toaster } from '@/components/ui/sonner';
+import ReduxProvider from './utils/ReduxProvider';
+import ErrorBoundary from './utils/ErrorBoundary';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -61,11 +64,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${mabryPro.variable} ${exo2.variable} antialiased`}
       >
-        <div className="fixed top-0 w-full z-90">
-          <Header />
-        </div>
-        <div>{children}</div>
-        <Footer />
+        <Toaster />
+        <ReduxProvider>
+          <ErrorBoundary>
+            <div className="fixed top-0 w-full z-90">
+            </div>
+            <div>{children}</div>
+          </ErrorBoundary>
+        </ReduxProvider>
       </body>
     </html>
   );
